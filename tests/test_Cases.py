@@ -1,6 +1,5 @@
 from playwright.sync_api import Page, sync_playwright
 
-
 def test_login_page(page: Page):
     page.goto("https://simple-login-cicd.vercel.app/")
     assert "Login" in page.title()
