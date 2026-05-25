@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — Sparkle</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+</head>
+<body class="dash-body">
+
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand">
+        <div class="brand-icon small"><i class="fas fa-bolt"></i></div>
+        <span class="brand-name">Sparkle</span>
+      </div>
+    </div>
+    <nav class="topbar-nav">
+      <a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+      <a href="#" class="nav-link"><i class="fas fa-chart-bar"></i> Analytics</a>
+      <a href="#" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
+    </nav>
+    <div class="topbar-right">
+      <div class="user-avatar" id="userAvatar">A</div>
+      <span class="user-name" id="userGreeting">Admin</span>
+      <button class="btn-logout" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dash-main">
+
+    <!-- Hero Banner -->
+    <section class="success-banner" id="successBanner">
+      <div class="success-icon-wrap">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+      <div class="success-content">
+        <h1 id="welcomeHeading">Welcome back, Admin! 🎉</h1>
+        <p>You have successfully logged in. Have a great session!</p>
+      </div>
+    </section>
+
+    <!-- Stats Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon blue"><i class="fas fa-users"></i></div>
+        <div class="stat-info">
+          <span class="stat-number">1,284</span>
+          <span class="stat-label">Total Users</span>
+        </div>
+        <span class="stat-badge up"><i class="fas fa-arrow-up"></i> 12%</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green"><i class="fas fa-shopping-cart"></i></div>
+        <div class="stat-info">
+          <span class="stat-number">348</span>
+          <span class="stat-label">Orders</span>
+        </div>
+        <span class="stat-badge up"><i class="fas fa-arrow-up"></i> 8%</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon purple"><i class="fas fa-dollar-sign"></i></div>
+        <div class="stat-info">
+          <span class="stat-number">$24,500</span>
+          <span class="stat-label">Revenue</span>
+        </div>
+        <span class="stat-badge up"><i class="fas fa-arrow-up"></i> 5%</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon orange"><i class="fas fa-star"></i></div>
+        <div class="stat-info">
+          <span class="stat-number">98.2%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+        <span class="stat-badge down"><i class="fas fa-arrow-down"></i> 1%</span>
+      </div>
+    </section>
+
+    <!-- Activity + Quick Actions -->
+    <section class="dash-grid">
+
+      <div class="dash-card">
+        <h3 class="card-title"><i class="fas fa-clock"></i> Recent Activity</h3>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div class="act-dot green"></div>
+            <div class="act-info">
+              <span class="act-title">New user registered</span>
+              <span class="act-time">2 minutes ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="act-dot blue"></div>
+            <div class="act-info">
+              <span class="act-title">Order #1042 placed</span>
+              <span class="act-time">15 minutes ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="act-dot purple"></div>
+            <div class="act-info">
+              <span class="act-title">Payment received — $320</span>
+              <span class="act-time">1 hour ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="act-dot orange"></div>
+            <div class="act-info">
+              <span class="act-title">System backup completed</span>
+              <span class="act-time">3 hours ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="act-dot green"></div>
+            <div class="act-info">
+              <span class="act-title">Report exported successfully</span>
+              <span class="act-time">Yesterday</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dash-card">
+        <h3 class="card-title"><i class="fas fa-bolt"></i> Quick Actions</h3>
+        <div class="quick-actions">
+          <button class="qa-btn">
+            <i class="fas fa-user-plus"></i>
+            <span>Add User</span>
+          </button>
+          <button class="qa-btn">
+            <i class="fas fa-file-alt"></i>
+            <span>New Report</span>
+          </button>
+          <button class="qa-btn">
+            <i class="fas fa-upload"></i>
+            <span>Upload File</span>
+          </button>
+          <button class="qa-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Send Email</span>
+          </button>
+          <button class="qa-btn">
+            <i class="fas fa-chart-pie"></i>
+            <span>Analytics</span>
+          </button>
+          <button class="qa-btn">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

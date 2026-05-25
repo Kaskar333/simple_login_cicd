@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — Welcome Back</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+</head>
+<body class="login-body">
+
+  <div class="login-wrapper">
+
+    <!-- Left Panel -->
+    <div class="login-left">
+      <div class="brand">
+        <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+        <span class="brand-name">Sparkle</span>
+      </div>
+      <div class="left-content">
+        <h1>Welcome Back 👋</h1>
+        <p>Sign in to your account and pick up right where you left off.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-shield-alt"></i> Secure & encrypted login</li>
+          <li><i class="fas fa-tachometer-alt"></i> Fast access to your dashboard</li>
+          <li><i class="fas fa-user-circle"></i> Personalized experience</li>
+        </ul>
+      </div>
+      <div class="left-circles">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="login-right">
+      <div class="login-card">
+        <h2>Sign In</h2>
+        <p class="subtitle">Enter your credentials to continue</p>
+
+        <div id="error-msg" class="error-msg hidden">
+          <i class="fas fa-exclamation-circle"></i>
+          <span id="error-text">Invalid username or password.</span>
+        </div>
+
+        <form id="loginForm" novalidate>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="input-wrap">
+              <i class="fas fa-user input-icon"></i>
+              <input
+                type="text"
+                id="username"
+                placeholder="e.g. admin"
+                autocomplete="username"
+              />
+            </div>
+            <span class="field-error" id="username-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <i class="fas fa-lock input-icon"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              />
+              <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">
+                <i class="fas fa-eye" id="eyeIcon"></i>
+              </button>
+            </div>
+            <span class="field-error" id="password-error"></span>
+          </div>
+
+          <div class="form-options">
+            <label class="remember">
+              <input type="checkbox" id="remember" />
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-login" id="loginBtn">
+            <span id="btn-text">Sign In</span>
+            <span id="btn-spinner" class="spinner hidden"></span>
+          </button>
+
+        </form>
+
+        <p class="signup-text">
+          Don't have an account? <a href="#">Sign up</a>
+        </p>
+
+        <div class="demo-hint">
+          <i class="fas fa-info-circle"></i>
+          Demo credentials: <strong>admin</strong> / <strong>password123</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
