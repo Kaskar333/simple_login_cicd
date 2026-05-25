@@ -14,6 +14,8 @@ def test_login(page: Page):
     # page.wait_for_timeout(2000)  
     # assert "Dashboard" in page.title()
     print("Dashboard page found test has passes!")
+    page.locator("#logoutBtn").click()
+    print("User logout test has passed!")
 
 if __name__ == "__main__":
     with sync_playwright() as playwright:
