@@ -77,7 +77,7 @@ if (isLoginPage) {
       // Flash the button green before redirect
       loginBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
       btnText.textContent = '✓ Success!';
-      await sleep(600);
+      await sleep(500);
       window.location.href = 'dashboard.html';
     } else {
       showError('Invalid username or password. Please try again.');
@@ -85,7 +85,7 @@ if (isLoginPage) {
       passwordEl.classList.add('input-error');
       // Shake animation
       form.classList.add('shake');
-      setTimeout(() => form.classList.remove('shake'), 500);
+      setTimeout(() => form.classList.remove('shake'), 0);
     }
   });
 
