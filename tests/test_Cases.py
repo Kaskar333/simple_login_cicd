@@ -16,7 +16,7 @@ def test_login(page: Page):
 
 if __name__ == "__main__":
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=False)
+        browser = playwright.chromium.launch(headless=True)
         page = browser.new_page()
         test_login_page(page)
         test_login(page)
