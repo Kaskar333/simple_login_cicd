@@ -1,0 +1,27 @@
+name: Playwright tests
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on : ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright Browsers
+        run: |
+          playwright install --with-deps
+
+      - name: Run Tests
+        run: |
+          pytest
+
