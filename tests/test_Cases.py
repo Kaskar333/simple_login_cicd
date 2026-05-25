@@ -7,6 +7,7 @@ def test_login_page(page: Page):
     print("Login page found test has passes!")
     
 def test_login(page: Page):
+    page.goto("https://simple-login-cicd.vercel.app/")
     page.locator("#username").fill("admin")
     page.locator("#password").fill("password123")
     page.locator("#loginBtn").click()
