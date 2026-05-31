@@ -7,7 +7,7 @@ payload = {
     "name": "Pytest Mertz",
     "email": "pytest@hotmail.com",
     "phone": "(453) 703-0753 x0538",
-    "address": "Karachi"
+    "address": "Sandhurst"
   }
 
 def test_getUser():
