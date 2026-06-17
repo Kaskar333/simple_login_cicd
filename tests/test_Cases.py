@@ -10,7 +10,7 @@ def test_login(page: Page):
     page.locator("#username").fill("admin")
     page.locator("#password").fill("password123")
     page.locator("#loginBtn").click()
-    # page.wait_for_timeout(2000)  
+    page.wait_for_timeout(2000)  
     # assert "Dashboard" in page.title()
     print("Dashboard page found test has passes!")
     page.locator("#logoutBtn").click()
