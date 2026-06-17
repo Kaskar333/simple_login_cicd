@@ -1,5 +1,4 @@
 import requests
-import time
 
 getUrl = "https://6a1bf7688858a003817b5dee.mockapi.io/orderdata/userCollection"
 
